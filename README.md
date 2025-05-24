@@ -23,7 +23,7 @@
 Get MusicWalker up and running in no time\!
 
 1.  Go to the [Releases]() page.
-2.  Download the latest `MusicWalker-vX.X.X.zip` archive.
+2.  Download the latest `MusicWalker-vX.X.X.rar` archive.
 3.  Extract the ZIP file to your preferred location.
 4.  Run `MusicWalker.exe`.
 
@@ -61,7 +61,7 @@ Want to build MusicWalker yourself? Here's how.
 3.  **Clone & Build:**
 
     ```powershell
-    git clone https://github.com/Shailesh-Singh-Bisht/MusicWalker
+    git clone https://github.com/Shailesh-Singh-Bisht/MusicWalker.git
     cd MusicWalker
     mkdir build
     cd build
