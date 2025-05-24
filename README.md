@@ -39,23 +39,23 @@ Want to build MusicWalker yourself? Here's how.
 
   * **Operating System:** Windows 10 or higher.
   * **MSYS2:** Installed to `C:\msys64`.
-  * **Qt:** **Qt 5.5.1 (MinGW 32-bit version)**.
+  * **Qt:** **Qt Framework (Made using 5.5.1 but make work on latest ones)**.
   * **CMake:** Version 3.15 or higher.
   * **Editor:** Visual Studio Code with C++ extensions (recommended).
 
 ### Setup Steps
 
 1.  **Install MSYS2 Dependencies:**
-    Open the **MSYS2 MINGW32 terminal** and run:
+    Open the **MSYS2 MINGW64 terminal** and run:
 
     ```powershell
     pacman -Syu
-    pacman -S mingw-w64-i686-gcc mingw-w64-i686-ninja mingw-w64-i686-SDL2 mingw-w64-i686-SDL2_mixer
+    pacman -S mingw-w64-x86_64-gcc mingw-w64-x86_64-ninja mingw-w64-x86_64-SDL2 mingw-w64-x86_64-SDL2_mixer
     ```
 
 2.  **Set Up Qt:**
 
-      * Install **Qt 5.5.1 MinGW 32-bit**.
+      * Install **Qt Framework**.
       * Add the `bin` folder of your Qt installation to your system's **PATH** environment variable.
 
 3.  **Clone & Build:**
@@ -121,7 +121,7 @@ MusicWalker/
 
 ## Building Tips
 
-  * Ensure all paths in `CMakeLists.txt` correctly match your system setup.
+  * Ensure all paths in `CMakeLists.txt` correctly match your system setup. If you have installed Qt at same place else make sure to change the paths in CMakeLists.txt.
   * The **SDL2** configuration is optimized for **MSYS2** paths.
   * For distributing your build, remember to use `windeployqt`.
   * Building in **Release** mode is recommended for final distribution.
