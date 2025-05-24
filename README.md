@@ -1,76 +1,87 @@
 # MusicWalker
 
-A modern, sleek MP3 music player built with Qt and SDL_mixer. MusicWalker provides a clean and intuitive interface for playing your music files with an easy-to-use queue system.
+**MusicWalker** is a modern, sleek MP3 music player built with **Qt** and **SDL\_mixer**. It provides a clean and intuitive interface for playing your music files with an easy-to-use queue system.
 
-![MusicWalker Screenshot](asset/screenshot.png)
+-----
 
 ## Features
 
-- 🎵 MP3 file playback support
-- 📑 Music queue management system
-- 🎨 Modern dark theme UI
-- ⌨️ Keyboard shortcuts for common actions
-- 📱 Responsive design that adapts to window size
-- 🔊 High-quality audio playback using SDL_mixer
-- 📁 Simple drag-and-drop file support
-- 🎯 Memory-efficient playback engine
+  * **MP3 Playback:** Supports playback of your MP3 audio files.
+  * **Music Queue:** Easily manage your music with a robust queue system.
+  * **Modern UI:** Enjoy a sleek, dark-themed interface.
+  * **Responsive Design:** The interface adapts seamlessly to different window sizes.
+  * **High-Quality Audio:** Delivers crisp, clear sound using **SDL\_mixer**.
+  * **Memory-Efficient:** Designed for optimal performance with a lightweight playback engine.
+
+-----
 
 ## Quick Start (Using Release)
 
-1. Go to the [Releases](https://github.com/yourusername/MusicWalker/releases) page
-2. Download the latest `MusicWalker-vX.X.X.zip`
-3. Extract the ZIP file
-4. Run `MusicWalker.exe`
+Get MusicWalker up and running in no time\!
 
-No installation required - just extract and run!
+1.  Go to the [Releases]() page.
+2.  Download the latest `MusicWalker-vX.X.X.zip` archive.
+3.  Extract the ZIP file to your preferred location.
+4.  Run `MusicWalker.exe`.
+
+No installation is required – just extract and play\!
+
+-----
 
 ## Build from Source
 
+Want to build MusicWalker yourself? Here's how.
+
 ### Prerequisites
 
-- Windows 10 or higher
-- [MSYS2](https://www.msys2.org/) installed to `C:\msys64`
-- [Qt 5.5.1](https://download.qt.io/archive/qt/5.5/5.5.1/) (MinGW 32-bit version)
-- [CMake](https://cmake.org/download/) (3.15 or higher)
-- [Visual Studio Code](https://code.visualstudio.com/) with C++ extensions
+  * **Operating System:** Windows 10 or higher.
+  * **MSYS2:** Installed to `C:\msys64`.
+  * **Qt:** **Qt 5.5.1 (MinGW 32-bit version)**.
+  * **CMake:** Version 3.15 or higher.
+  * **Editor:** Visual Studio Code with C++ extensions (recommended).
 
 ### Setup Steps
 
-1. **Install MSYS2 Dependencies:**
+1.  **Install MSYS2 Dependencies:**
+    Open the **MSYS2 MINGW32 terminal** and run:
 
-   ```powershell
-   # Open MSYS2 MINGW32 terminal and run:
-   pacman -Syu
-   pacman -S mingw-w64-i686-gcc mingw-w64-i686-ninja mingw-w64-i686-SDL2 mingw-w64-i686-SDL2_mixer
-   ```
+    ```powershell
+    pacman -Syu
+    pacman -S mingw-w64-i686-gcc mingw-w64-i686-ninja mingw-w64-i686-SDL2 mingw-w64-i686-SDL2_mixer
+    ```
 
-2. **Set Up Qt:**
+2.  **Set Up Qt:**
 
-   - Install Qt 5.5.1 MinGW 32-bit to `C:\Qt\Qt5.5.1`
-   - Add `C:\Qt\Qt5.5.1\bin` to your system's PATH
+      * Install **Qt 5.5.1 MinGW 32-bit**.
+      * Add the `bin` folder of your Qt installation to your system's **PATH** environment variable.
 
-3. **Clone & Build:**
+3.  **Clone & Build:**
 
-   ```powershell
-   git clone https://github.com/yourusername/MusicWalker.git
-   cd MusicWalker
-   mkdir build
-   cd build
-   cmake .. -G Ninja -DCMAKE_PREFIX_PATH="C:/Qt/Qt5.5.1/mingw32"
-   ninja
-   ```
+    ```powershell
+    git clone https://github.com/Shailesh-Singh-Bisht/MusicWalker
+    cd MusicWalker
+    mkdir build
+    cd build
+    cmake .. -G "MinGW Makefiles" 
+    cmake --build .
+    ```
 
-4. **Deploy:**
-   ```powershell
-   # From the build directory:
-   windeployqt MusicWalker/MusicWalker.exe
-   ```
+4.  **Deploy:**
+    From the `build` directory, run:
 
-### Project Structure
+    ```powershell
+    windeployqt MusicWalker/MusicWalker.exe
+    ```
+
+    This command collects all necessary Qt DLLs for distribution.
+
+-----
+
+## Project Structure
 
 ```
 MusicWalker/
-├── asset/               # Icons and resources
+├── asset/              # Icons and resources
 ├── include/            # Header files
 │   ├── AudioPlayer.h   # SDL_mixer audio interface
 │   ├── MainWindow.h    # Main application window
@@ -78,60 +89,70 @@ MusicWalker/
 │   ├── PlayerWidget.h  # Playback controls
 │   └── QueueManager.h  # Music queue handling
 ├── src/                # Implementation files
-├── CMakeLists.txt     # Build configuration
-├── main.cpp           # Application entry point
-└── resource.rc        # Windows resources
+├── CMakeLists.txt      # Build configuration
+├── main.cpp            # Application entry point
+└── resource.rc         # Windows resources
 ```
 
-## Key Files
+-----
 
-- `AudioPlayer`: Handles MP3 playback using SDL_mixer
-- `QueueManager`: Manages the music playlist and history
-- `PlayerWidget`: Contains playback controls (play, pause, etc.)
-- `PlayerArea`: Shows current track information
-- `MainWindow`: Main application window and coordination
+## Key Files Explained
+
+  * **`AudioPlayer`**: Manages MP3 playback using **SDL\_mixer**.
+  * **`QueueManager`**: Handles the music playlist and playback history.
+  * **`PlayerWidget`**: Contains all playback controls (play, pause, next, etc.).
+  * **`PlayerArea`**: Displays information about the currently playing track.
+  * **`MainWindow`**: The main application window responsible for overall coordination.
+
+-----
 
 ## Development Notes
 
-The project uses:
+  * Utilizes **C++11** features for modern coding practices.
+  * **Qt 5.5** powers the entire user interface.
+  * **SDL2** and **SDL2\_mixer** are used for robust audio playback.
+  * **CMake** simplifies the build configuration process.
+  * Designed with a contemporary dark theme.
 
-- C++11 features
-- Qt 5.5 for the UI framework
-- SDL2 and SDL2_mixer for audio playback
-- CMake for build configuration
-- Modern dark theme design
+-----
 
 ## Building Tips
 
-1. Make sure all paths in CMakeLists.txt match your system
-2. The SDL2 configuration assumes MSYS2 paths
-3. Qt deployment requires windeployqt for distribution
-4. Building in Release mode is recommended for distribution
+  * Ensure all paths in `CMakeLists.txt` correctly match your system setup.
+  * The **SDL2** configuration is optimized for **MSYS2** paths.
+  * For distributing your build, remember to use `windeployqt`.
+  * Building in **Release** mode is recommended for final distribution.
+
+-----
 
 ## Known Issues
 
-- Only supports MP3 format currently
-- Queue is not persistent between sessions
-- No volume control in current version
+  * Currently supports only **MP3** format.
+  * The playback queue is not persistent between sessions.
+  * Volume control is not available in the current version.
+
+-----
 
 ## Contributing
 
-1. Fork the repository
-2. Create a feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request
+We welcome contributions\! To contribute:
+
+1.  Fork the repository.
+2.  Create a new feature branch: `git checkout -b my-new-feature`.
+3.  Commit your changes: `git commit -am 'Add some feature'`.
+4.  Push to the branch: `git push origin my-new-feature`.
+5.  Submit a pull request.
+
+-----
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the **MIT License** – see the `LICENSE` file for full details.
+
+-----
 
 ## Acknowledgments
 
-- Qt Framework team
-- SDL and SDL_mixer developers
-- MSYS2 project maintainers
-
----
-
-Made with ❤️ by [Your Name]
+  * The **Qt Framework** team.
+  * **SDL** and **SDL\_mixer** developers.
+  * **MSYS2** project maintainers.
