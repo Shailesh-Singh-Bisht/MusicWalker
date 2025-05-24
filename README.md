@@ -127,22 +127,13 @@ MusicWalker/
   * Building in **Release** mode is recommended for final distribution.
 
 -----
-
-## Known Issues
-
-  * Currently supports only **MP3** format.
-  * The playback queue is not persistent between sessions.
-  * Volume control is not available in the current version.
-
------
-
 ## How to Contribute
 
 We welcome contributions of all kinds! Here's how you can help make TextMAN even better:
 
 ### Getting Started
 1. Fork the repository
-2. Clone your fork: `git clone https://github.com/Shailesh-Singh-Bisht/TextMAN-Text-Editor.git`
+2. Clone your fork: `git clone https://github.com/Shailesh-Singh-Bisht/MusicWalker.git`
 3. Create a new branch: `git checkout -b feature/your-feature-name`
 
 ### Making Changes
@@ -164,11 +155,6 @@ We welcome contributions of all kinds! Here's how you can help make TextMAN even
 - 🎨 UI/UX enhancements
 - 🧪 Test coverage
 - 🌐 Internationalization
-
-### Development Environment Setup
-1. Ensure you have all [Build Requirements](#build-requirements)
-2. Follow the [Building from Source](#building-from-source) instructions
-3. For development, we recommend using Qt Creator or Visual Studio with Qt extension
 
 ### Need Help?
 - Open an issue for bugs or feature requests
