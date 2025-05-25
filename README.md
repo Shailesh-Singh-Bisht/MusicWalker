@@ -22,7 +22,7 @@
 
 Get MusicWalker up and running in no time\!
 
-1.  Go to the [Releases]() page.
+1.  Go to the [Releases](https://github.com/Shailesh-Singh-Bisht/MusicWalker/releases/tag/Release) page.
 2.  Download the latest `MusicWalker-vX.X.X.rar` archive.
 3.  Extract the ZIP file to your preferred location.
 4.  Run `MusicWalker.exe`.
